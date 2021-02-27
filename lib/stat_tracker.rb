@@ -11,9 +11,9 @@ class StatTracker # < MethodsClass?
   end
 
   def initialize(locations)
-    @game_data = GameData.new(locations[:games], self)
-    @team_data = TeamData.new(locations[:teams], self)
-    @game_stats = GameStatsData.new(locations[:game_stats], self)
+    @game_data = GameData.new(locations[:games])
+    # @team_data = TeamData.new(locations[:teams], self)
+    # @game_stats = GameStatsData.new(locations[:game_stats], self)
   end
 
   def highest_total_score

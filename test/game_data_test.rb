@@ -2,20 +2,11 @@ require './test/test_helper'
 
 class GameDataTest < Minitest::Test
   def setup
-    @game_path = './test/games_dummy.csv'
-
-    locations = {
-      games: @game_path
-    }
-
-    @stat_tracker = mock
-
-    @game_data = GameData.new(locations[:games], @stat_tracker)
+    @game_data = GameData.new(@dummy_game_path)
   end
 
   def test_it_exists
     assert_instance_of GameData, @game_data
-    assert mock, @stat_tracker
   end
 
   def test_highest_total_score_in_game
@@ -25,6 +16,7 @@ class GameDataTest < Minitest::Test
 
   def test_lowest_total_score_in_game
     assert_equal 1, @game_data.lowest_total_score_in_game
+    require "pry"; binding.pry
   end
   ##Edgecase for multiple highest scores - array?
 
