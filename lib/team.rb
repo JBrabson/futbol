@@ -8,9 +8,9 @@ class Team
               :link
 
   def initialize(data)
-    @team_id = data[:team_id]
-    @franchise_id = data[:franchise_id]
-    @teamName = data[:team_name]
+    @team_id = data[:teamid]
+    @franchise_id = data[:franchiseid]
+    @teamname = data[:teamname]
     @abbreviation = data[:abbreviation]
     @stadium = data[:stadium]
     @link = data[:link]
