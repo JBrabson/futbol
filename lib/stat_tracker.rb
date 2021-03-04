@@ -74,4 +74,17 @@ class StatTracker
     team_least_average = game_team_manager.teams_least_average_goals
     @team_manager.find_team_by_id(team_least_average).teamname
   end
+
+  def highest_scoring_visitor
+  end
+
+  def best_defense
+    most_tackles = @game_team_manager.most_tackles
+    @team_manager.find_team_by_id(most_tackles).teamname
+  end
+
+  def worst_defense
+    fewest_tackles_id = @game_team_manager.fewest_tackles
+    @team_manager.find_team_by_id(fewest_tackles_id).teamname
+  end
 end
