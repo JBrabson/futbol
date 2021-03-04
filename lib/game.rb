@@ -27,8 +27,6 @@ class Game
     @away_goals + @home_goals
   end
 
-  # add methods as much as possible: ratio?
-
   def winner
     if @home_goals > @away_goals
       :home
